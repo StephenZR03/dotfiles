@@ -32,8 +32,33 @@ return require('packer').startup(function(use)
         end
     }
 
-    use 'catppuccin/nvim'                             -- catppuccin theme
-    use 'sainnhe/gruvbox-material'                    -- gruvbox theme
+    --use 'catppuccin/nvim'                           -- catppuccin theme
+    --use 'sainnhe/gruvbox-material'                  -- gruvbox theme
+    use 'nvim-tree/nvim-web-devicons'
+    use {
+        'nvimdev/dashboard-nvim',
+        event = 'VimEnter',
+        config = function()
+            require('dashboard').setup {
+                config = {
+                    header = {
+                        [[                                                                       ]],
+                        [[                                                                     ]],
+                        [[       ████ ██████           █████      ██                     ]],
+                        [[      ███████████             █████                             ]],
+                        [[      █████████ ███████████████████ ███   ███████████   ]],
+                        [[     █████████  ███    █████████████ █████ ██████████████   ]],
+                        [[    █████████ ██████████ █████████ █████ █████ ████ █████   ]],
+                        [[  ███████████ ███    ███ █████████ █████ █████ ████ █████  ]],
+                        [[ ██████  █████████████████████ ████ █████ █████ ████ ██████ ]],
+                        [[                                                                       ]],
+                    }
+                }
+            }
+        end,
+        requires = { 'nvim-tree/nvim-web-devicons' }
+    }
+    use 'craftzdog/solarized-osaka.nvim'              -- solatized osaka theme
     use 'folke/neodev.nvim'                           -- neovim config code suggestions
     use 'numToStr/Comment.nvim'                       -- auto-commenting
     use 'JoosepAlviste/nvim-ts-context-commentstring' -- context based comments
@@ -42,6 +67,8 @@ return require('packer').startup(function(use)
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use 'mbbill/undotree'                             -- undo history
     use 'tpope/vim-fugitive'                          -- git integration
+    use 'lewis6991/gitsigns.nvim'
+    use 'f-person/git-blame.nvim'
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
@@ -76,8 +103,8 @@ return require('packer').startup(function(use)
         "CopilotC-Nvim/CopilotChat.nvim",
         branch = "canary",
         dependencies = {
-            { "zbirenbaum/copilot.lua" },     -- or github/copilot.vim
-            { "nvim-lua/plenary.nvim" },      -- for curl, log wrapper
+            { "zbirenbaum/copilot.lua" }, -- or github/copilot.vim
+            { "nvim-lua/plenary.nvim" },  -- for curl, log wrapper
         },
     }
 end)
