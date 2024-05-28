@@ -2,6 +2,13 @@
 
 This repository contains my personal configuration for my i3wm setup.
 
+# Screenshots
+![1](1.png)
+![2](2.png)
+![3](3.png)
+![4](4.png)
+![5](5.png)
+
 ## Theming
 
 I installed i3wm alongside gnome on arch-linux. I made use of some gnome tools
