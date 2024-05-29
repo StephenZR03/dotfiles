@@ -11,29 +11,33 @@ This repository contains my personal configuration for my i3wm setup.
 ## Theming
 
 I installed i3wm alongside gnome on arch-linux. I made use of some gnome tools
-to theme apps on i3. I'm using the NumixSolarizedDarkCyan GTK theme. On Neovim,
-I'm using [crafzdog's](https://github.com/craftzdog) solarized-osaka.nvim and
+to theme apps on i3. I'm using the `NumixSolarizedDarkCyan` GTK theme. On nvim,
+I'm using [crafzdog's](https://github.com/craftzdog) `solarized-osaka.nvim` and
 custom solarized colors on i3. These are just the main theme config.
 The configs are available on the repo in their respective folders.
 
 ## Tools and Packages
 
-- i3wm
-    - bumblebee status
-    - picom
-    - lxappearance
+- `i3wm`
+    - `bumblebeestatus`
+    - `picom`
+    - `lxappearance`
 
-- pcmanfm (file explorer)
+- `pcmanfm` (file explorer)
 
-- tmux
-    - tpm
+- `tmux`
+    - `tpm` (tmux package manager)
 
-- neovim
-    - packer
+- `neovim`
+    - `packer` (package manager)
 
-- spotify
-    - spicetify(theme: text, colorscheme: solarized)
+- `spotify`
+    - spicetify (theme: text, colorscheme: solarized)
 
-- volnoti (volume notifications)
-- flameshot (screenshot utility)
-- Fonts: Geist(main), SFMono Nerd Font Mono(monospace and terminal)
+- `discord`
+    - custom client (`vesktop`) with `ClientTheme` plugin set to base03
+    solarized colorscheme color. see [this](https://ericnormand.me/article/solarized-cheat-sheet)
+
+- `volnoti` (volume notifications)
+- `flameshot` (screenshot utility)
+- Fonts: Geist (main), SFMono Nerd Font Mono (monospace and terminal)
