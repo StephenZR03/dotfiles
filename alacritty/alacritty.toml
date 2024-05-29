@@ -1,0 +1,10 @@
+import = [
+	"~/.config/alacritty/solarized-osaka.toml"
+]
+
+[font]
+normal = { family = "SFMono Nerd Font Mono", style = "Normal" }
+size=11
+
+[window]
+padding = { x = 15, y = 15 }

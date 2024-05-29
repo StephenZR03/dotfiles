@@ -24,6 +24,7 @@ The configs are available on the repo in their respective folders.
     - `lxappearance`
 
 - `pcmanfm` (file explorer)
+- `alacritty` (terminal emulator)
 
 - `tmux`
     - `tpm` (tmux package manager)
