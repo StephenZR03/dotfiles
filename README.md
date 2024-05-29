@@ -1,6 +1,6 @@
 # My Dotfiles
 
-This repository contains my personal configuration for my i3wm setup.
+This repository contains configuration files and information for my i3wm setup.
 
 ## Screenshots
 ![1](1.png)
