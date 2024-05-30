@@ -19,7 +19,7 @@ The configs are available on the repo in their respective folders.
 ## Tools and Packages
 
 - `i3wm`
-    - `bumblebeestatus`
+    - `bumblebeestatus` (solarized theme)
     - `picom`
     - `lxappearance`
 
