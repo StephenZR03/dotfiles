@@ -1,8 +1,8 @@
 # My Dotfiles
 
-This repository contains my personal configuration for my i3wm setup.
+This repository contains configuration files and information for my i3wm setup.
 
-# Screenshots
+## Screenshots
 ![1](1.png)
 ![2](2.png)
 ![3](3.png)
@@ -19,7 +19,7 @@ The configs are available on the repo in their respective folders.
 ## Tools and Packages
 
 - `i3wm`
-    - `bumblebeestatus`
+    - `bumblebeestatus` (solarized theme)
     - `picom`
     - `lxappearance`
 
