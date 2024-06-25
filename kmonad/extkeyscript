@@ -1,0 +1,7 @@
+#!/bin/bash
+
+device_name="usb-Razer_Razer_Huntsman_Mini_00000000001A-event-kbd"
+
+if [[ -e "/dev/input/by-id/${device_name}" ]]; then
+    /usr/bin/kmonad /home/stephen/.config/kmonad/extconfig.kbd
+fi

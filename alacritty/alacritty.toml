@@ -1,9 +1,11 @@
 import = [
-	"~/.config/alacritty/solarized-osaka.toml"
+    "~/.config/alacritty/themes/themes/kanagawa_wave.toml.toml"
 ]
 
 [font]
-normal = { family = "SFMono Nerd Font Mono", style = "Normal" }
+normal = { family = "MesloLGS Nerd Font", style = "Normal" }
+bold = { family = "MesloLGS Nerd Font", style="Bold"}
+italic = { family = "MesloLGS Nerd Font", style="italic"}
 size=11
 
 [window]

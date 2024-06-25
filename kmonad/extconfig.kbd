@@ -1,0 +1,40 @@
+(defcfg 
+	input (device-file "/dev/input/by-id/usb-Razer_Razer_Huntsman_Mini_00000000001A-event-kbd")
+	output (uinput-sink "KMonad Extkbd")
+	fallthrough true
+)
+
+(defsrc
+  tab   q    w    e    r    t    y    u    i    o    p    [    ]    ret
+  caps  a    s    d    f    g    h    j    k    l    ;    '    \
+  lsft  z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl  lmet lalt            spc                ralt cmp  rctl
+)
+
+(defalias 
+  lsy (layer-toggle symbols)
+)
+
+(defalias
+  cps (tap-next esc (layer-toggle symbols))
+  rts (tap-next ret rctl)
+)
+
+(defalias
+  lsw (layer-switch symbols)
+  lws (layer-switch main)
+)
+
+(deflayer main
+  tab   q    w    e    r    t    y    u    i    o    p    [    ]    @rts
+  @cps  a    s    d    f    g    h    j    k    l    ;    '    \
+  lsft  z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl  lmet lalt            spc                ralt cmp  rmet
+)
+
+(deflayer symbols
+  tab   S-1  S-2  S-3  S-4  S-5  S-6  =    +    S-[  S-]  \    |    ret
+  @cps  a    s    d    f    g    left down up   rght [    ]    \
+  lsft  z    x    c    v    b    caps `    ~    home caps rsft
+  lctl  lmet lalt            end                ralt rmet rctl
+)

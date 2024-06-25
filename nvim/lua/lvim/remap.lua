@@ -58,3 +58,6 @@ vim.keymap.set("n", "<leader>cco", "<cmd>CopilotChatOpen<cr>", { desc = "open co
 
 vim.keymap.set("n", "<leader>bn", "<cmd>bnext<cr>", { desc = "next buffer" })
 vim.keymap.set("n", "<leader>bp", "<cmd>bprev<cr>", { desc = "previous buffer" })
+
+vim.keymap.set("n", "<leader>gvd", "<cmd>Gvdiffsplit<cr>", { desc = "git split (vertical)" })
+vim.keymap.set("n", "<leader>ghd", "<cmd>Ghdiffsplit<cr>", { desc = "git split (horizontal)" })

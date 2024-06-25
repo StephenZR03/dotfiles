@@ -1,3 +1,4 @@
+--             shortcut_type = 'number',
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
 -- Only required if you have packer configured as `opt`
@@ -34,31 +35,64 @@ return require('packer').startup(function(use)
 
     --use 'catppuccin/nvim'                           -- catppuccin theme
     --use 'sainnhe/gruvbox-material'                  -- gruvbox theme
+    use 'rebelot/kanagawa.nvim'
+    --use 'craftzdog/solarized-osaka.nvim'              -- solatized osaka theme
+    --use({ 'kepano/flexoki-neovim', as = 'flexoki' })
+    --use "kdheepak/monochrome.nvim"
+    use { "ellisonleao/glow.nvim", config = function() require("glow").setup() end }
     use 'nvim-tree/nvim-web-devicons'
+
+    -- dashboard configuration
     use {
         'nvimdev/dashboard-nvim',
         event = 'VimEnter',
         config = function()
-            require('dashboard').setup {
+            require('dashboard').setup({
+                theme = 'hyper',
                 config = {
-                    header = {
-                        [[                                                                       ]],
-                        [[                                                                     ]],
-                        [[       ████ ██████           █████      ██                     ]],
-                        [[      ███████████             █████                             ]],
-                        [[      █████████ ███████████████████ ███   ███████████   ]],
-                        [[     █████████  ███    █████████████ █████ ██████████████   ]],
-                        [[    █████████ ██████████ █████████ █████ █████ ████ █████   ]],
-                        [[  ███████████ ███    ███ █████████ █████ █████ ████ █████  ]],
-                        [[ ██████  █████████████████████ ████ █████ █████ ████ ██████ ]],
-                        [[                                                                       ]],
-                    }
+                    week_header = {
+                        enable = true,
+                        append = { '千里之行，始於足下 - "A journey of a thousand miles begins with a single step."' }
+                    },
+
+                    shortcut = {
+                        {
+                            desc = '󰢱 Mason',
+                            group = '@property',
+                            action = 'Mason',
+                            key = 'm',
+                        },
+
+                        {
+                            icon = ' ',
+                            icon_hl = '@variable',
+                            desc = 'Files',
+                            group = 'Label',
+                            action = 'Telescope find_files',
+                            key = 'f',
+                        },
+
+                        {
+                            desc = ' Keymaps',
+                            group = 'DiagnosticHint',
+                            action = 'Telescope keymaps',
+                            key = 'i',
+                        },
+
+                        {
+                            desc = ' Dotfiles',
+                            group = '@constant',
+                            action = 'e ~/.config/nvim/ | Telescope find_files cwd=',
+                            key = 'd',
+                        },
+                    },
+
+                    project = { enable = true, limit = 5 }
                 }
-            }
+            })
         end,
         requires = { 'nvim-tree/nvim-web-devicons' }
     }
-    use 'craftzdog/solarized-osaka.nvim'              -- solatized osaka theme
     use 'folke/neodev.nvim'                           -- neovim config code suggestions
     use 'numToStr/Comment.nvim'                       -- auto-commenting
     use 'JoosepAlviste/nvim-ts-context-commentstring' -- context based comments
